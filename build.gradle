@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.sdzl.openapi'
+//version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
+}
+
+dependencies {
+    compile (
+            'org.springframework.boot:spring-boot:2.1.6.RELEASE',
+            'org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE',
+            'io.springfox:springfox-swagger2:2.9.2',
+            'io.springfox:springfox-swagger-ui:2.9.2',
+            'org.apache.httpcomponents:httpclient:4.5.9',
+            'com.google.code.gson:gson:2.8.5',
+            'com.google.guava:guava:28.0-jre',
+            'org.apache.commons:commons-lang3:3.6',
+
+            'joda-time:joda-time:2.9.4',
+
+            'ca.uhn.hapi.fhir:hapi-fhir-base:3.7.0',
+            'ca.uhn.hapi.fhir:hapi-fhir-server:3.7.0',
+            'ca.uhn.hapi.fhir:hapi-fhir-client:3.7.0',
+            'ca.uhn.hapi.fhir:hapi-fhir-structures-dstu3:3.7.0',
+    )
+    compile files('libs/com.varian.fhir.resources-2015.jar')
+    compileOnly 'org.projectlombok:lombok:1.16.6'
+    annotationProcessor 'org.projectlombok:lombok:1.16.6'
+}

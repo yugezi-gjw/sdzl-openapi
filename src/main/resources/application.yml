@@ -1,0 +1,20 @@
+#自定义的属性和值
+sysConfig:
+  fhirUrl: http://10.120.116.204:44352
+  fhirTockenAuthUserName: cciptokenuser
+  fhirTockenAuthPwd: V@rianCN01
+
+  fhirConnectionTimeout: 40000
+  fhirConnectionRequestTimeout: 40000
+  fhirSocketTimeout: 40000
+  fhirLanguage: CHS
+
+  clientId: 55d691d8-3a55-43b4-b6e2-1d3334fd2ec3
+  clientSecret: z%i[KZ|l_fm#
+  domainName: vms
+  gettingTokenEndPoint: https://10.120.116.204:44333/tokenservice/connect/token
+  refreshTokenEndPoint: https://10.120.116.204:44333/tokenservice/connect/token
+server:
+  port: 8000
+logging:
+  file: log/openapi.log
