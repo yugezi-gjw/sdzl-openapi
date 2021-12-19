@@ -67,6 +67,7 @@ public class OpenApiResource {
     })
     @RequestMapping(value = "/treatmentsummary", method = RequestMethod.GET)
     public ResponseEntity<TreatmentSummaryDto> queryRTSummary(@RequestParam("id1") String id1) {
+        log.info("Query RT summary by id1[{}].", id1);
         TreatmentSummaryDto dto = new TreatmentSummaryDto();
         if (authenticationUtil.initDefaultToken()) {
             dto = treatmentSummaryAntiCorruptionServiceImp.getApproveTxSummaryById1(id1).orElse(dto);

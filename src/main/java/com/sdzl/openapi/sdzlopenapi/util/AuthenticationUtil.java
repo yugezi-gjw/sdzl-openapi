@@ -30,6 +30,7 @@ public class AuthenticationUtil {
     public boolean initDefaultToken() {
         String defaultUserToken = getDefaultUserToken();
         if (Objects.nonNull(defaultUserToken)) {
+            log.info("Successful to init default user token.");
             UserContextHandler.set(defaultUserToken);
             AuthenticationCachePool
                 .getCache().put(sysConfig.getFhirTockenAuthUserName(), defaultUserToken);

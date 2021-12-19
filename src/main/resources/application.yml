@@ -1,5 +1,6 @@
 #自定义的属性和值
 sysConfig:
+#FHIR配置
   fhirUrl: http://10.120.116.204:44352
   fhirTockenAuthUserName: cciptokenuser
   fhirTockenAuthPwd: V@rianCN01
@@ -9,6 +10,7 @@ sysConfig:
   fhirSocketTimeout: 40000
   fhirLanguage: CHS
 
+#VAIS配置
   clientId: 55d691d8-3a55-43b4-b6e2-1d3334fd2ec3
   clientSecret: z%i[KZ|l_fm#
   domainName: vms
