@@ -9,6 +9,8 @@ import com.sdzl.openapi.sdzlopenapi.model.VAISToken;
 import com.sdzl.openapi.sdzlopenapi.model.treatmentsummary.TreatmentSummaryDto;
 import com.sdzl.openapi.sdzlopenapi.util.AuthenticationUtil;
 import com.sdzl.openapi.sdzlopenapi.vais.VAISHttpClient;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -60,6 +62,9 @@ public class OpenApiResource {
     }
 
     @ApiOperation(value = "查询患者的TreatmentSummary信息", httpMethod = "GET", notes = "查询患者的TreatmentSummary信息")
+    @ApiImplicitParams({
+        @ApiImplicitParam(paramType = "query", name = "id1", required = true, dataType = "String", example = "1100", value = "患者的ID1"),
+    })
     @ApiResponses({
         @ApiResponse(code = 400, message = "请求参数不正确"),
         @ApiResponse(code = 401, message = "未认证，请先登录"),
